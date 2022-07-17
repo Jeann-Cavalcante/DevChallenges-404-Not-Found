@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crimson Pro", "Lora", serif "Montserrat", sans-serif, "PT Serif";
+  background-color: #181719;
+  color: #fff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 2rem;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px;
+}
+
+.container header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 10vh;
+}
+
+.container header span {
+  border: 1px solid #fff;
+  padding: 0.5rem;
+}
+
+.container header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.container header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.container header ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  height: calc(100vh - 10vh);
+}
+
+@media (max-width: 1280px) {
+  body {
+    overflow: hidden;
+  }
+  .container header nav ul {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 100vw;
+    height: 92vh;
+    background-color: #181719;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+
+    transform: translateX(100%);
+    transition: 0.3s;
+  }
+
+  .container header nav ul li {
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+
+  .container header nav ul.active {
+    transform: translateX(0);
+  }
+
+  .container header nav ul.active li {
+    opacity: 1;
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .logo.active {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/devchallenges.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@200;400;500;600;700&family=PT+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Interior-consultant</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+        <div class="logo">
+          <span>This Interior</span>
+        </div>
+
+        
+
+          <ul >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2" ></div>
+          <div class="line3"></div>
+        </div>
+        </nav>
+      </header>
+
+      <main>
+        <div>
+          <!-- <section>
+            <h2>Modern interior</h2>
+            <p>
+              A full-Service residential & commercial interior design and
+              staging company offering professional organizing & eco-services.
+            </p>
+
+            <strong>Read more</strong> -->
+          </section>
+          <section></section>
+        </div>
+
+        <section></section>
+      </main>
+
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+
+    <script>
+      let mobileMenu = document.querySelector(".mobile-menu");
+      let menu = document.querySelector("ul");
+      let logo = document.querySelector(".logo");
+      let activeClass = "active";
+
+      mobileMenu.addEventListener("click", function () {
+        menu.classList.toggle(activeClass);
+        mobileMenu.classList.toggle(activeClass);
+        logo.classList.toggle(activeClass);
+      
+      });
+    </script>
+  </body>
+</html>
